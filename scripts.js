@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 var typed = new Typed('.typed', {
     strings: ["Graphic Designer", "2D Animator", "3D Animator", "Video Editor", "Illustrator", "Digital Artist", "Content Creator",],
-    typeSpeed: 40,
+    typeSpeed: 50,
     backSpeed: 40,
     loop: true
 });
