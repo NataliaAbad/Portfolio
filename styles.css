@@ -1,0 +1,141 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Ocultar barra de desplazamiento en navegadores WebKit (Brave, Chrome, Safari, Edge) */
+body,
+html {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    /* Ocultar barra de desplazamiento vertical */
+    height: 0px;
+    /* Ocultar barra de desplazamiento horizontal */
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    color: #fff;
+}
+
+#portfolio{
+    margin-bottom: 100px;
+}
+
+#portfolio-container {
+    height: 80vh;
+}
+#contact-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+}
+
+
+/* Contenedor de la galería usando Flexbox */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* Las imágenes se ajustan en varias filas */
+    gap: 20px;
+    /* Espacio entre los elementos de la cuadrícula */
+    position: relative;
+    /* Necesario para el posicionamiento absoluto de los elementos */
+}
+
+/* Asegurarnos de que las imágenes tengan el mismo tamaño */
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px);
+    /* Ajusta el tamaño de los ítems a un tercio del contenedor */
+    max-width: calc(33.333% - 20px);
+    height: 300px;
+    /* Altura fija */
+    overflow: hidden;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Transición reducida a 0.3s */
+    position: relative;
+    /* Permite el ajuste de posición */
+}
+
+/* Asegura que las imágenes ocupen el espacio completo del contenedor */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mantiene la proporción y cubre el contenedor */
+}
+
+/* Ocultar las imágenes suavemente */
+.gallery-item.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+    /* Reducir ligeramente el tamaño para una salida más suave */
+}
+
+/* Mostrar imágenes suavemente */
+.gallery-item.show {
+    opacity: 1;
+    transform: scale(1);
+    /* Devuelve el tamaño normal */
+}
+
+/* Ocultar completamente (elimina del layout) */
+.gallery-item.hidden {
+    display: none;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#footer {
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.social-media{
+    width: 40px;
+}
