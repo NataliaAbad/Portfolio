@@ -1,20 +1,12 @@
-fetch('portfolio.html')
-    .then(response => {
+document.addEventListener("DOMContentLoaded", function() {
+    // Cargar el contenido del portfolio
+    fetch('portfolio.html')
+        .then(response => {
         if (!response.ok) {
             throw new Error('Error al cargar el portfolio: ' + response.statusText);
         }
         return response.text();
-    })
-    .then(data => {
-        document.getElementById('portfolio-container').innerHTML = data;
-        // Tu código actual para el filtrado...
-    })
-    .catch(error => console.error('Error al cargar el portfolio:', error));
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Cargar el contenido del portfolio
-    fetch('portfolio.html')
-        .then(response => response.text())
+        })
         .then(data => {
             document.getElementById('portfolio-container').innerHTML = data;
 
